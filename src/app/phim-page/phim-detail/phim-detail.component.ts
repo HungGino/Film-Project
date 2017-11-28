@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+declare var jquery:any;
+declare var $:any;
 
 @Component({
   selector: 'app-phim-detail',
@@ -7,6 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PhimDetailComponent implements OnInit {
 
+  public status:boolean = false;
+  Show(){
+    this.status = true;
+  };
+  
+  StopTrailer(){
+    this.status = false;
+
+    $('#trailerModal').modal('hide');
+  };
+  
   constructor() { }
 
   ngOnInit() {

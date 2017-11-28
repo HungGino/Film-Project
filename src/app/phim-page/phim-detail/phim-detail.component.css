@@ -1,0 +1,133 @@
+#top{
+    margin-top:100px;
+}
+.contain{
+    padding-left: 35px;
+}
+.contain header{
+    padding-left: 15px;
+    margin-bottom: 30px;
+}
+.contain header b{
+    color: #a5050f;
+    font-weight: bold;
+    font-size: 25px;
+}
+.contain section{
+    padding-top: 10px;
+    font-size: 16px;
+    color: #565d69;
+}
+.contain section p{
+    margin: 0;
+}
+.contain section:last-child{
+    margin-top:20px;
+}
+button{
+    background-color: #a5050f;
+    color: white;
+    border-radius: 10px;
+    border: 1.5px solid #a5050f;
+    box-shadow: 5px 5px 5px rgba(130,130,130,0.7);    
+    margin-left: 5%;
+    font-weight: bold;
+}
+button a{
+    color: white;
+    text-decoration: none;
+}
+button:hover{
+    border: 1.5px solid #a5050f;
+    background-color: white;
+    color:#a5050f;
+}
+button:hover a{
+    color: #a5050f
+}
+.close{
+    width: 30px;
+    opacity: 1;
+}
+
+.limit-age{
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    padding: 4px 8px;
+    margin: 0 0 5px 10px;
+}
+.p{
+    background-color: #028900;
+}
+.c13{
+    background-color: #fcbc14;
+}
+.c16{
+    background-color: #f3683d;
+}
+.c18{
+    background-color: #8d0001;
+}
+
+.row-2{
+    margin-top:50px;
+}
+.row-2 p{
+    font-size: 16px;
+    color: #565d69;
+    text-align: justify; 
+}
+
+#trailerModal .modal-body{
+    background: black;
+    padding:0;
+}
+
+
+@media screen and (max-width:992px){
+    .contain{
+        padding-left: 10px;
+    }
+    .contain section div{
+        padding-right: 0;
+    }
+    .contain header b{
+        font-size: 22px;
+    }
+}
+@media screen and (max-width:768px) {
+    .contain section, .row-2 p{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:767px) {
+    .border-img img{
+        width:40%;
+        margin: 0 30%;
+    }
+    .contain header{
+        text-align: center;
+        margin-top:20px;
+    }
+    .contain section{
+        margin: 0 5%;
+    }
+    .contain section:last-child{
+        text-align: center;
+    }
+    .row-2 p{
+        padding: 10px 10px;
+    }
+}
+@media screen and (max-width:480px) {
+    .contain header b{
+        font-size: 21px;
+    }
+    .row-2 p{
+        padding: 10px 10px;
+    }
+    .trailer{
+        height: 150px;
+    }
+}

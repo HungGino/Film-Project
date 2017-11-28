@@ -13,7 +13,10 @@ import { PhimDetailComponent } from './phim-detail/phim-detail.component';
 // Import thư viện scrollbar
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
-import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar'; 
+
+// Import thư viện Page scroll
+import { Ng2PageScrollModule } from 'ng2-page-scroll';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -21,7 +24,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 
 @NgModule({
   imports: [
-    CommonModule, PerfectScrollbarModule, 
+    CommonModule, PerfectScrollbarModule, Ng2PageScrollModule
   ],
   declarations: [HeaderComponent, FooterComponent, HomePageComponent, SliderComponent,  CinemaComponent, NewsComponent, PhimComponent, NewsDetailComponent, PhimDetailComponent],
   exports: [HeaderComponent, FooterComponent, HomePageComponent, SliderComponent, CinemaComponent, NewsComponent, PhimComponent, NewsDetailComponent, PhimDetailComponent],
