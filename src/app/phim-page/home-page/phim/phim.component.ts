@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-phim',
@@ -19,8 +20,12 @@ export class PhimComponent implements OnInit {
         this.select = false;
       }
 
-  constructor() { 
+  constructor( private router:Router) { 
 
+  }
+
+  RouterMovie(){
+    this.router.navigate(['movies']);
   }
 
   ngOnInit() {

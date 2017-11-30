@@ -9,6 +9,8 @@ import { NewsComponent } from './home-page/news/news.component';
 import { PhimComponent } from './home-page/phim/phim.component';
 import { NewsDetailComponent } from './news-detail/news-detail.component';
 import { PhimDetailComponent } from './phim-detail/phim-detail.component';
+import { FormsModule } from '@angular/forms';
+
 
 // Import thư viện scrollbar
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
@@ -18,13 +20,16 @@ import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 // Import thư viện Page scroll
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
 
+// Import thư viện Datepicker
+import { MyDatePickerModule } from 'mydatepicker';
+
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
 
 @NgModule({
   imports: [
-    CommonModule, PerfectScrollbarModule, Ng2PageScrollModule
+    CommonModule, PerfectScrollbarModule, Ng2PageScrollModule, MyDatePickerModule, FormsModule
   ],
   declarations: [HeaderComponent, FooterComponent, HomePageComponent, SliderComponent,  CinemaComponent, NewsComponent, PhimComponent, NewsDetailComponent, PhimDetailComponent],
   exports: [HeaderComponent, FooterComponent, HomePageComponent, SliderComponent, CinemaComponent, NewsComponent, PhimComponent, NewsDetailComponent, PhimDetailComponent],
