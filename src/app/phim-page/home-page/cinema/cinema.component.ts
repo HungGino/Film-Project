@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cinema.component.css']
 })
 export class CinemaComponent implements OnInit {
-  
-  public status:any = 'cgv';
+
+  public status: any = 'cgv';
 
   // Hiệu ứng click chọn rạp
   Select_cinema(item) {

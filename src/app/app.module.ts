@@ -16,10 +16,10 @@ import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    AppComponent, 
+    AppComponent,
   ],
   imports: [
-    BrowserModule, PhimPageModule, Ng2PageScrollModule, appRoutes, RouterModule
+    BrowserModule, PhimPageModule, Ng2PageScrollModule, appRoutes, RouterModule, HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

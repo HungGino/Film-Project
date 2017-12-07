@@ -8,9 +8,9 @@ import { Router } from '@angular/router';
 })
 export class NewsComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router: Router) { }
 
-  RouterNews(){
+  RouterNews() {
     this.router.navigate(['news']);
   }
 

@@ -10,12 +10,15 @@ import { PhimComponent } from './home-page/phim/phim.component';
 import { NewsDetailComponent } from './news-detail/news-detail.component';
 import { PhimDetailComponent } from './phim-detail/phim-detail.component';
 import { FormsModule } from '@angular/forms';
+import { MovieService} from '../service/movie.service';
 
+// Import thư viện router
+import { RouterModule } from '@angular/router';
 
 // Import thư viện scrollbar
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
-import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar'; 
+import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
 // Import thư viện Page scroll
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
@@ -29,15 +32,18 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 
 @NgModule({
   imports: [
-    CommonModule, PerfectScrollbarModule, Ng2PageScrollModule, MyDatePickerModule, FormsModule
+    CommonModule, PerfectScrollbarModule, Ng2PageScrollModule, MyDatePickerModule, FormsModule, RouterModule
   ],
-  declarations: [HeaderComponent, FooterComponent, HomePageComponent, SliderComponent,  CinemaComponent, NewsComponent, PhimComponent, NewsDetailComponent, PhimDetailComponent],
-  exports: [HeaderComponent, FooterComponent, HomePageComponent, SliderComponent, CinemaComponent, NewsComponent, PhimComponent, NewsDetailComponent, PhimDetailComponent],
+  declarations: [HeaderComponent, FooterComponent, HomePageComponent, SliderComponent,
+    CinemaComponent, NewsComponent, PhimComponent, NewsDetailComponent, PhimDetailComponent],
+  exports: [HeaderComponent, FooterComponent, HomePageComponent, SliderComponent, CinemaComponent,
+    NewsComponent, PhimComponent, NewsDetailComponent, PhimDetailComponent],
   providers: [
     {
       provide: PERFECT_SCROLLBAR_CONFIG,
       useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
-    }
+    },
+    MovieService
   ]
 })
 export class PhimPageModule { }
