@@ -24,9 +24,9 @@ export class PhimDetailComponent implements OnInit,PipeTransform  {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
-  onYouTubePlayerAPIReady() {
+  /*onYouTubePlayerAPIReady() {
     this.player = new YT.Player('player');
-  }
+  }*/
 
   Show() {
     this.status = true;

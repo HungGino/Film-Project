@@ -11,6 +11,7 @@ import { NewsDetailComponent } from './news-detail/news-detail.component';
 import { PhimDetailComponent } from './phim-detail/phim-detail.component';
 import { FormsModule } from '@angular/forms';
 import { MovieService} from '../service/movie.service';
+import { UserModule } from '../user/user.module';
 
 // Import thư viện router
 import { RouterModule } from '@angular/router';
@@ -32,7 +33,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 
 @NgModule({
   imports: [
-    CommonModule, PerfectScrollbarModule, Ng2PageScrollModule, MyDatePickerModule, FormsModule, RouterModule
+    CommonModule, PerfectScrollbarModule, Ng2PageScrollModule, MyDatePickerModule, FormsModule, RouterModule, UserModule
   ],
   declarations: [HeaderComponent, FooterComponent, HomePageComponent, SliderComponent,
     CinemaComponent, NewsComponent, PhimComponent, NewsDetailComponent, PhimDetailComponent],

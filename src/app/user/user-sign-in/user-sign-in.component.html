@@ -1,0 +1,31 @@
+<div class="centered-form">
+
+    <div class="panel panel-default">
+      <div class="panel-header">
+        <h3>Đăng Nhập</h3>
+      </div>
+
+      <div class="panel-body">
+        <form role="form" #registerForm='ngForm' (ngSubmit)='Login(registerForm.value)'>
+
+          <div class="col-xs-offset-1 col-xs-10 ">
+            <div class="form-group">
+              <input type="text" name="UserName" #UserName='ngModel' ngModel id="UserName" class="form-control input-sm" placeholder="User Name">
+            </div>
+          </div>
+
+          <div class="col-xs-offset-1 col-xs-10 ">              
+            <div class="form-group">
+              <input type="password" name="PassWord" #UserName='ngModel' ngModel id="PassWord" class="form-control input-sm" placeholder="PassWord">
+            </div>
+          </div>
+
+          <div class="col-xs-offset-1 col-xs-10">
+            <input type="submit" value="Đăng Nhập" class="btn btn-lock btnSubmit">
+          </div>
+          </form>      
+      </div>
+    </div>
+
+</div>
+<p>Nếu chưa có tài khoản <a (click) = "SignUp()"> Đăng ký ngay</a></p>

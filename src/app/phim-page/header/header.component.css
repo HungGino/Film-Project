@@ -91,6 +91,35 @@ nav{
     display: none;
 }
 
+.modal-header{
+    background-color: #d0ecf4;
+}
+.modal-body{
+    background-color: rgba(208,236,244,0.5);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;   
+}
+
+button{
+    background-color: #a5050f;
+    color: white;
+    border-radius: 10px;
+    border: 1.5px solid #a5050f;
+    box-shadow: 2px 2px 5px rgba(130,130,130,0.7);    
+    margin-left: 5%;
+    font-weight: bold;
+}
+button:hover{
+    border: 1.5px solid #a5050f;
+    background-color: white;
+    color:#a5050f;
+}
+.close {
+    width: 30px;
+    opacity: 1;
+}
+
+
 @media screen and (max-width: 900px) {
     .box-logo span{
         font-size: 15px;
