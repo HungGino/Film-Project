@@ -23,7 +23,7 @@ export class UserSignUpComponent implements OnInit {
   {Id:'GP010',Name:'Nhóm 10'}]*/
 
 private userRegister:User;
-
+public kqDK:boolean;
 constructor(private userService:UserService) { }
 
 RegisterUser(user:any){
@@ -32,6 +32,7 @@ RegisterUser(user:any){
   this.userService.TaoTaiKhoan(user).subscribe((result:any) => {
     this.userRegister = result;
     console.log(result);
+    this.kqDK = true;
     }, 
     error => {
     this.userRegister = error;

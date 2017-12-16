@@ -23,7 +23,14 @@
           <li><a pageScroll href="#rap">Rạp</a></li>
           <li><a pageScroll href="#news">Tin Tức</a></li>
           <li><a pageScroll href="#footer">Liên Hệ</a></li>
-          <li><a data-toggle="modal" data-target="#myModal" (click) = "SignIn()"><i class="fa fa-user-circle user-sign-in"></i><span>Tài Khoản</span></a></li>
+          <li>
+            <a data-toggle="modal" data-target="#myModal" (click) = "SignIn()" *ngIf = '!kqdangnhap'>
+              <i class="fa fa-user-circle user-sign-in"></i>
+              <span>Tài Khoản</span>
+            </a>
+            <p *ngIf = 'kqdangnhap'> Xin chào {{infoUser}}, <a>Đăng xuất</a> </p>            
+          </li>
+
         </ul>
       </div>
     </nav>
@@ -39,8 +46,9 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
-          <app-user-sign-in *ngIf = 'userStatus' (ktdangnhap) = "checkSignUp($event)"></app-user-sign-in>    
+          <app-user-sign-in *ngIf = 'userStatus' (ktdangnhap) = "checkSignUp($event)" (tinhtrangdangnhap) = "tinhtrangdangnhap($event)"></app-user-sign-in>    
           <app-user-sign-up *ngIf = '!userStatus' ></app-user-sign-up>
+          <div *ngIf = '!kqdangnhap'> Tên đăng nhập hoặc mật khẩu không đúng </div>
         </div>
       </div>
     </div>

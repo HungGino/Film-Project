@@ -71,7 +71,7 @@ header{
     transform: scale(1.05,1.05);
 }   
 .cinema-item .border-img{
-    padding: 5px 0 0 0;
+    padding: 5px 5% 0 0;
 }
 .cinema-item .img-item{
     width: 100%;
@@ -94,14 +94,15 @@ header{
 }
 
 .show-time-cinema{
-    height: 200px;
+    height: 220px;
     padding-top:5px;
 }
 .show-time-cinema .border-phim{
-    padding: 0 30px;
+    padding: 0 5%;
 }
 .show-time-cinema .content{
     height: 200px;
+    margin-top: 10px;
 }    
 .show-time-cinema .content b{
     font-size: 20px;
@@ -171,7 +172,7 @@ header{
         padding: 5px 0;
     }
     .cinema-item .img-item{
-        padding: 0 35%;
+        padding: 0 25%;
     }
     .list-right{
         display: none;

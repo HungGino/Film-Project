@@ -30,6 +30,12 @@ export class HeaderComponent implements OnInit {
     this.userStatus = value;
   }
 
+  // Hàm lấy giá trị kqdangnhap để xét hiển thị thông tin User
+  private kqdangnhap:boolean;
+  tinhtrangdangnhap(value){
+    this.kqdangnhap = value;
+  }
+
   
   
   ngOnInit() {

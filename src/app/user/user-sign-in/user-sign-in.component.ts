@@ -26,7 +26,7 @@ export class UserSignInComponent implements OnInit {
   
  
   private UserLogin:UserLogin;
-
+  private kqdangnhap:boolean;
   
   @Output () tinhtrangdangnhap = new EventEmitter();
 
@@ -40,10 +40,15 @@ export class UserSignInComponent implements OnInit {
       if (this.userService.KiemTraDangNhap() == true){
         console.log('Đăng nhập thành công');
         this.router.navigate(['']);
-
         $('#myModal').modal('hide');
+        // Đẩy giá trị kqdangnhap ra component cha để xét hiển thị
+        this.kqdangnhap = true;
+        this.tinhtrangdangnhap.emit(this.kqdangnhap);
       }
       else{
+        // Đẩy giá trị kqdangnhap ra component cha để xét hiển thị
+        this.kqdangnhap = false;
+        this.tinhtrangdangnhap.emit(this.kqdangnhap);
         console.log('Tên đăng nhập hoặc mật khẩu không đúng');
      
       }
