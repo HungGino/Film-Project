@@ -105,13 +105,13 @@ a:hover{
   transition: all .2s;
   margin-top: 25px;
   margin-bottom: 20px;
-  background-color: #fb4226;
+  background-color: #7ed321;
   border: none;
   color: #fff;
 }
 
 .btnBuy:hover{
-  background-color: #B42A14;
+  background-color: #7ed321;
 }
 
 .titleContent {
@@ -139,7 +139,7 @@ a:hover{
 }
 
 .chooseTitle>h3 {
-  color: #FB4226;
+  color: #429321;
   font-size: 30px;
 }
 

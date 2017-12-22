@@ -1,5 +1,5 @@
-<div class="container-fluid">
-  <header>
+<div class="container-fluid" id="slideFilm">
+  <header id="phim">
     <a class="choose col-sm-6 col-xs-12" (click)="Select_Phim()" [ngClass]="{choose:select}">Phim Đang Chiếu</a>
     <a class="col-sm-6 col-xs-12" (click)="Disselect_Phim()" [ngClass]="{choose:!select}">Phim Sắp Chiếu</a>
   </header>
@@ -10,7 +10,7 @@
     <div id="nowShowing" class="carousel slide" data-ride="carousel" [ngClass]="{active:select}">
 
       <!-- Wrapper for slides -->
-      <div class="carousel-inner" id="slidePhim" [ngSwitch]="status">
+      <div class="carousel-inner" [ngSwitch]="status">
         <!-- Large Screen -->
         <div class="item itemPhim" *ngFor="let page of Arr; index as i" [ngClass]="{active:i===0}">
           <div class="listPhimLarge col-xs-offset-1 col-xs-10">

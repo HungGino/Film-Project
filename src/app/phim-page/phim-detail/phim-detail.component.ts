@@ -1,10 +1,10 @@
-import { Component, OnInit,Pipe,PipeTransform } from '@angular/core';
+import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription, Observable } from 'rxjs';
 import { ISubscription } from 'rxjs/Subscription';
 import { MovieService } from '../../service/movie.service';
-import { DomSanitizer} from '@angular/platform-browser';
-declare let $: any;
+import { DomSanitizer } from '@angular/platform-browser';
+declare const $: any;
 
 @Component({
   selector: 'app-phim-detail',
@@ -12,13 +12,11 @@ declare let $: any;
   styleUrls: ['./phim-detail.component.css']
 })
 @Pipe({ name: 'safe' })
-export class PhimDetailComponent implements OnInit,PipeTransform  {
+export class PhimDetailComponent implements OnInit, PipeTransform {
   private urlHost: string = 'http://sv.myclass.vn/Images/Movies/';
   private MovieDetail: any = {};
   private MovieID: number;
   private MaNhom: any;
-  private showDate: Array<any>;
-  private showTime: Array<any>;
   public status: boolean = false;
   public selected: number;
 
@@ -26,11 +24,11 @@ export class PhimDetailComponent implements OnInit,PipeTransform  {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
-  Selected(value: number){
+  Selected(value: number) {
     this.selected = value;
   }
 
-  isSelected(value: number){
+  isSelected(value: number) {
     return this.selected === value;
   }
 
@@ -51,7 +49,7 @@ export class PhimDetailComponent implements OnInit,PipeTransform  {
   ) { }
 
   ngOnInit() {
-    
+
     this.activatedRouter.queryParams.subscribe(thamso => {
       this.MovieID = parseInt(thamso['id']);
       this.MaNhom = thamso['groupid'];

@@ -1,5 +1,5 @@
 nav{
-	height: 70px;
+	height: 60px;
     background: rgba(255, 255, 255, 0.85);
 	width: 100%;
 	display: block;
@@ -10,6 +10,11 @@ nav{
     border-radius: 0;
     box-shadow: 0 1px 3px grey;
 }
+
+.navbar {
+    margin: 0;
+}
+
 .navbar-header{
 	padding-left: 50px;
 	padding-top: 5px;
@@ -39,7 +44,7 @@ nav{
 
 .box-logo a{
     text-decoration: none;
-    color: #a5050f;
+    color: #7ed321;
 }
 .box-logo img{
 	transition: transform 1s ease;
@@ -58,7 +63,7 @@ nav{
     margin: 10px 50px;
 }
 .navbar-toggle:hover{
-    background-color:#a5050f;
+    background-color:#7ed321;
 }
 .navbar-toggle:hover > .icon-bar{
     background-color: white;
@@ -78,7 +83,7 @@ nav{
     -ms-transition: transform 1s ease;
 }
 .navbar-right li a:hover{
-    color: #a5050f;
+    color: #7ed321;
     -webkit-transform: scale(1.2,1.2);
     -ms-transform: scale(1.2,1.2);
     transform: scale(1.2,1.2);
@@ -101,18 +106,18 @@ nav{
 }
 
 button{
-    background-color: #a5050f;
+    background-color: #7ed321;
     color: white;
     border-radius: 10px;
-    border: 1.5px solid #a5050f;
+    border: 1.5px solid #7ed321;
     box-shadow: 2px 2px 5px rgba(130,130,130,0.7);    
     margin-left: 5%;
     font-weight: bold;
 }
 button:hover{
-    border: 1.5px solid #a5050f;
+    border: 1.5px solid #7ed321;
     background-color: white;
-    color:#a5050f;
+    color:#7ed321;
 }
 .close {
     width: 30px;
@@ -159,7 +164,7 @@ button:hover{
         -ms-transition: transform 1s ease;
     }
     .navbar-right li a:hover{
-        background-color:#a5050f;
+        background-color:#7ed321;
         color: white;
         -webkit-transform: scale(1.2,1.2);
         -ms-transform: scale(1.2,1.2);

@@ -1,5 +1,11 @@
 <div class="col-xs-12 block" id="detailShowTimes">
   <ul class="nav nav-tabs groupCinema">
+    <li id="bhd" #bhd (click)="selected(bhd.id)" [ngClass]='{active:isSelected(bhd.id)}'>
+      <a class="tabcinema">
+        <img src="assets/Images/cinema_logo/bhd.png">
+        <p>BHD Star</p>
+      </a>
+    </li>
     <li id="cgv" #cgv (click)="selected(cgv.id)" [ngClass]='{active:isSelected(cgv.id)}'>
       <a class="tabcinema">
         <img src="assets/Images/cinema_logo/cgv.png">
@@ -16,12 +22,6 @@
       <a class="tabcinema">
         <img src="assets/Images/cinema_logo/lotte_icon.png">
         <p>Lotte Cinema</p>
-      </a>
-    </li>
-    <li id="bhd" #bhd (click)="selected(bhd.id)" [ngClass]='{active:isSelected(bhd.id)}'>
-      <a class="tabcinema">
-        <img src="assets/Images/cinema_logo/bhd.png">
-        <p>BHD Star</p>
       </a>
     </li>
     <li id="cns" #cns (click)="selected(cns.id)" [ngClass]='{active:isSelected(cns.id)}'>
@@ -48,15 +48,18 @@
         <div class="cinemaInfo">
           <img src="assets/Images/cinema_small/cgv-vincom-dong-khoi.jpg" class="cinemaImg">
           <div class="wrapInfo">
-            <p class="headInfo"><span style="color:red">CGV</span> - <b>Vincom Đồng Khởi</b></p>
-            <p class="addressInfo">Tầng 3, TTTM Vincom Center B, 72 Lê Thánh Tôn, Bến Nghé, Q.1</p>
+            <p class="headInfo">
+              <span style="color:#7ed321 ">BHD</span> -
+              <b>Bitexco</b>
+            </p>
+            <p class="addressInfo">Tầng 3, Bitexco Icon 68, 2 Hải Triều, Q.1</p>
           </div>
         </div>
       </div>
       <div class="wrapShowTime">
         <img src="assets/Images/2D.png" class="versionIcon">
         <div class="sessions">
-            <div class="session" *ngFor="let time of showTime" [routerLink]="['/booking']" [queryParams]="{showtimeid:time.ShowTimeID,movieid:MovieDetail.ID}">{{time.StartDate | slice:0:5}}</div>
+          <div class="session" *ngFor="let time of showTime" [routerLink]="['/booking']" [queryParams]="{showtimeid:time.ShowTimeID,movieid:MovieDetail.ID}">{{time.StartDate | slice:0:5}}</div>
         </div>
       </div>
     </div>

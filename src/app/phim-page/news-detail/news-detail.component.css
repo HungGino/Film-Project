@@ -3,7 +3,7 @@ header{
 }
 header h2{
     text-align: center;
-    color: #a5050f;
+    color: #7ed321;
     font-weight: bold;
     margin-bottom: 20px;
     font-size: 25px;
@@ -48,7 +48,7 @@ header .cmt .fa-thumbs-up{
     margin: 10px 15%;
 }
 .contain a{
-    color: #a5050f;
+    color: #7ed321;
     text-align: right;
     position: absolute;
     font-size: 18px;

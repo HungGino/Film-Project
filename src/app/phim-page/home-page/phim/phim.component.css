@@ -1,57 +1,57 @@
-header {
+#slideFilm header {
   height: 100px;
   padding-top: 70px;
   padding-bottom: 10px;
   cursor: pointer;
 }
 
-header a:first-child {
+#slideFilm header a:first-child {
   text-align: right;
 }
 
-header a:last-child {
+#slideFilm header a:last-child {
   text-align: left;
 }
 
-header a {
+#slideFilm header a {
   padding: 10px 15px;
   color: #565d69;
   text-decoration: none;
   font-size: 18px;
 }
 
-header .choose {
-  color: #a5050f;
+#slideFilm header .choose {
+  color: #7ed321;
   font-size: 25px;
   font-weight: bold;
   padding: 5px 15px;
 }
 
-.content {
+#slideFilm .content {
   margin-top: 50px;
   padding-top: 15px;
 }
 
-.content a>span {
+#slideFilm .content a>span {
   color: #565d69;
 }
 
-.content a:hover>span {
-  color: #a5050f;
+#slideFilm .content a:hover>span {
+  color: #7ed321;
 }
 
-.phim-control {
+#slideFilm .phim-control {
   background: none;
   width: 10%;
 }
 
-a {
+#slideFilm a {
   color: white;
 }
 
-a:hover {
+#slideFilm a:hover {
   text-decoration: none;
-  color: #a5050f;
+  color: #7ed321;
 }
 
 figcaption button {
@@ -59,8 +59,8 @@ figcaption button {
   width: 90%;
   margin: 20px 5% 0 5%;
   border-radius: 10px;
-  border: 1.5px solid #a5050f;
-  background-color: #a5050f;
+  border: 1.5px solid #7ed321;
+  background-color: #7ed321;
   color: white;
   padding: 5px 0;
   box-shadow: 5px 5px 5px rgba(130, 130, 130, 0.7);
@@ -71,7 +71,7 @@ figcaption p {
   height: 60px;
   font-size: 16px;
   font-weight: bold;
-  color: #a5050f;
+  color: #7ed321;
 }
 
 figcaption i {
@@ -177,10 +177,14 @@ figure:hover button {
 }
 
 figure:hover button:hover {
-  border: 1.5px solid #a5050f;
+  border: 1.5px solid #7ed321;
   background-color: white;
-  color: #a5050f;
+  color: #7ed321;
   font-weight: bold;
+}
+
+figure:hover button:hover > a {
+  color: #7ed321 !important;
 }
 
 @media screen and (max-width:1200px) and (min-width:992px) {

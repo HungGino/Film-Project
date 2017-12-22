@@ -1,13 +1,12 @@
 .container-fluid{
-    padding: 80px 0 0 0;
+    padding: 0;
 }
 footer{
     background-image: url('../../../assets/Images/cover.jpg');
     height: 540px;
-    margin-top: 30px;
 }
 section b{
-    color: #a5050f;
+    color: #7ed321;
     font-size: 20px;
     text-shadow: 1.5px 1.5px 2px white;
     margin-bottom: 20px;

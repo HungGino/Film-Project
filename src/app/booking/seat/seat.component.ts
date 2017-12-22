@@ -11,28 +11,19 @@ export class SeatComponent implements OnInit {
   private seatStatus: boolean = false;
   // Mã ghế
   @Input() seatID: any;
-  // Số ghế đã đặt
-  @Input() seatSelected: number;
   // Kiểm tra đã chọn hay chưa
   @Input() isChoose: boolean;
-  
+
   @Output() eventBooking = new EventEmitter;
 
-  public booking(value: boolean) {
+  public getSeat(value: boolean) {
     if (!this.isChoose) {
-      //if (this.seatSelected <= 8) {
-        if (value) {
-          this.seatStatus = false;
-        }
-        if (!value) {
-          this.seatStatus = true;
-        }
-      //}
-      // else {
-      //   if (value == true) {
-      //     this.seatStatus = false;
-      //   }
-      // }
+      if (value) {
+        this.seatStatus = false;
+      }
+      if (!value) {
+        this.seatStatus = true;
+      }
       this.eventBooking.emit(this.seatStatus);
     }
   }

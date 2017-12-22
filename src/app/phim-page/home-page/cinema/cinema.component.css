@@ -1,7 +1,7 @@
 header{
     height: 100px;
     font-size: 25px;
-    color: #a5050f;
+    color: #7ed321;
     font-weight: bold;
     text-align: center;
     margin-bottom: 30px ;
@@ -89,7 +89,7 @@ header{
     margin-bottom: 0;
 }
 .cinema-item .content p:first-child{
-    color: #a5050f;
+    color: #7ed321;
     font-weight: bold;
 }
 
@@ -106,7 +106,7 @@ header{
 }    
 .show-time-cinema .content b{
     font-size: 20px;
-    color: #a5050f;
+    color: #7ed321;
     cursor: pointer;
     float: left;
 } 
@@ -159,7 +159,7 @@ header{
     -webkit-transform: scale(1.2,1.2);
     -ms-transform: scale(1.2,1.2);
     transform: scale(1.2,1.2);
-    color: #a5050f;
+    color: #7ed321;
 }    
 @media screen and (max-width:1200px) and (min-width:992px){
     .show-time-cinema .border-phim{

@@ -27,8 +27,7 @@ public kqDK:boolean;
 constructor(private userService:UserService) { }
 
 RegisterUser(user:any){
-  // Nhóm 04
-  user.GroupID ='GP04';
+  user.GroupID ='GP03';
   this.userService.TaoTaiKhoan(user).subscribe((result:any) => {
     this.userRegister = result;
     console.log(result);
