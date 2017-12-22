@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Movie } from '../../../models/movie';
 import { MovieService } from '../../../service/movie.service';
 import { ViewEncapsulation } from '@angular/core';
-import {ListMovie} from '../../../models/list-movie';
+import { ListMovie } from '../../../models/list-movie';
 declare var jquery: any;
 declare var $: any;
 @Pipe({
@@ -23,68 +23,6 @@ export class PhimComponent implements OnInit {
   public select: boolean = true;
   public screenWidth: number;
   public status: number;
-
-  // public HienThi() {
-  //   const pages: number = 4;
-  //   let count: number = 0;
-  //   for (let i = 1; i <= pages; i++) {
-  //     const item = document.createElement('div');
-  //     $(item).addClass('item itemPhim');
-  //     $('#slidePhim').append(item);
-  //     if (i === 1) {
-  //       $(item).addClass('active');
-  //     }
-
-  //     const list = document.createElement('div');
-  //     $(list).addClass('listPhimLarge col-xs-offset-1 col-xs-10');
-  //     $(item).append(list);
-
-  //     while (count < this.DanhSachPhim.length) {
-  //       const figure = document.createElement('figure');
-  //       $(figure).addClass('col-sm-3 col-xs-6');
-  //       $(list).append(figure);
-
-  //       const border = document.createElement('div');
-  //       $(border).addClass('border-img');
-  //       $(figure).append(border);
-
-  //       const img = document.createElement('img');
-  //       $(img).addClass('img-responsive img-rounded');
-  //       $(img).attr('src', this.urlHost + this.DanhSachPhim[count].Image);
-  //       $(border).append(img);
-
-  //       const bgImg = document.createElement('div');
-  //       $(bgImg).addClass('bg-img');
-  //       $(border).append(bgImg);
-
-  //       const figcaption = document.createElement('figcaption');
-  //       $(figure).append(figcaption);
-
-  //       const div = document.createElement('div');
-  //       $(figcaption).append(div);
-
-  //       const name = document.createElement('p');
-  //       $(name).html(this.DanhSachPhim[count].Title);
-  //       $(div).append(name);
-
-  //       const detail = document.createElement('button');
-  //       $(detail).html('Chi Tiết');
-  //       $(div).append(detail);
-
-  //       const link = document.createElement('a');
-  //       $(link).attr({
-  //         'routerLink': `/moviedetail?id=${this.DanhSachPhim}`,
-  //         'queryParams': `{id:${this.DanhSachPhim[count].ID},groupid:${this.MaNhom}}`
-  //       });
-  //       $(detail).append(link);
-
-  //       count++;
-  //       if (count % pages === 0) {
-  //         break;
-  //       }
-  //     }
-  //   }
-  // }
 
   // Hàm click chọn title
   Select_Phim() {
@@ -127,7 +65,6 @@ export class PhimComponent implements OnInit {
         lstMovie.ListMovie = result.slice(pages, pages += filmInPage);
         this.Arr.push(lstMovie);
       }
-      console.log(this.Arr);
     }, error => {
       this.DanhSachPhim = error;
     });

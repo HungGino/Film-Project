@@ -26,6 +26,7 @@ import { Ng2PageScrollModule } from 'ng2-page-scroll';
 
 // Import thư viện Datepicker
 import { MyDatePickerModule } from 'mydatepicker';
+import { ShowtimesComponent } from './showtimes/showtimes.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -36,7 +37,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     CommonModule, PerfectScrollbarModule, Ng2PageScrollModule, MyDatePickerModule, FormsModule, RouterModule, UserModule
   ],
   declarations: [HeaderComponent, FooterComponent, HomePageComponent, SliderComponent,
-    CinemaComponent, NewsComponent, PhimComponent, NewsDetailComponent, PhimDetailComponent],
+    CinemaComponent, NewsComponent, PhimComponent, NewsDetailComponent, PhimDetailComponent, ShowtimesComponent],
   exports: [HeaderComponent, FooterComponent, HomePageComponent, SliderComponent, CinemaComponent,
     NewsComponent, PhimComponent, NewsDetailComponent, PhimDetailComponent],
   providers: [

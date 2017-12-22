@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 
 import { PhimPageModule } from './phim-page/phim-page.module';
+import { BookingModule } from './booking/booking.module';
 
 // Import thư viện Page scroll
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
@@ -19,7 +20,7 @@ import { RouterModule } from '@angular/router';
     AppComponent,
   ],
   imports: [
-    BrowserModule, PhimPageModule, Ng2PageScrollModule, appRoutes, RouterModule, HttpModule
+    BrowserModule, PhimPageModule, Ng2PageScrollModule, appRoutes, RouterModule, HttpModule, BookingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

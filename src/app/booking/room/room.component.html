@@ -1,0 +1,40 @@
+<div class="col-xs-12 topContent">
+  <div class="col-md-2 col-lg-1 col-xs-3 logo-booking">
+    <img src="assets/Images/cinema_logo/cgv.png" class="img-responsive">
+  </div>
+  <div class="col-md-6 col-xs-6">
+    <h5>CGV Cinema
+      <span> - Vincom Đồng Khởi</span>
+    </h5>
+    <p>{{dateShow}}, {{timeShow}} , {{roomShow}}</p>
+  </div>
+  <div class="col-md-4 col-md-offset-0 col-lg-offset-1 col-xs-3 col-xs-offset-0 timeBooking">
+    <h6>Thời gian giữ ghế</h6>
+    <p id="time"></p>
+  </div>
+</div>
+<div class="col-xs-12 screen">
+  <img src="assets/Images/bg-screen.png" />
+</div>
+<div class="col-xs-12 listSeat">
+  <app-seat #t *ngFor="let seat of listSeats.Seats;index as i" [seatID]="seat.SeatName"
+    [isChoose]="seat.Status" [seatSelected]="seatSelected"></app-seat>
+</div>
+<div class="note col-md-8 col-sm-9 col-sm-offset-1 col-md-offset-2 col-xs-12 col-xs-offset-0">
+  <div class="seat-note">
+    <div class="seatAvaible"></div>
+    <p>Ghế trống</p>
+  </div>
+  <div class="seat-note">
+    <div class="seatSelected"></div>
+    <p>Ghế đang chọn</p>
+  </div>
+  <div class="seat-note">
+    <div class="seatDisable"></div>
+    <p>Ghế đã chọn</p>
+  </div>
+  <div class="seat-note">
+    <i class="fa fa-window-close"></i>
+    <p>Ghế không thể chọn</p>
+  </div>
+</div>

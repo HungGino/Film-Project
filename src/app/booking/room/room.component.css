@@ -1,0 +1,335 @@
+.logo-booking {
+  padding-right: 0px;
+}
+
+.logo-booking img {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.topContent h5 {
+  color: #fd6500;
+  font-size: 18px;
+}
+
+.topContent p {
+  color: #605f5f;
+}
+
+.timeBooking {
+  text-align: center;
+}
+
+.timeBooking h6 {
+  color: #666665;
+  font-size: 18px;
+  margin-bottom: 3px;
+}
+
+.timeBooking p {
+  color: #fd6500;
+  font-size: 20px;
+}
+
+.screen img {
+  width: 96%;
+  margin-left: 2%;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.listSeat {
+  padding: 0px 35%;
+  width: 100%;
+  height: auto;
+}
+
+.seatAvaible,
+.seatSelected,
+.seatDisable {
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid black;
+  border-radius: 3px;
+  float: left;
+  margin-right: 5px;
+}
+
+.seatSelected {
+  background-color: #01c73c;
+  border: none;
+}
+
+.seatDisable {
+  background-color: #bbb;
+  border: none;
+}
+
+.seat-note i {
+  color: #bbbbbb;
+  font-size: 21px;
+  float: left;
+  margin-right: 5px;
+}
+
+.seat-note {
+  float: left;
+  width: 19%;
+  margin-top: 25px;
+  margin-right: 10px;
+}
+
+.seat-note:last-child {
+  width: 25%;
+}
+
+.note {
+  margin-top: 20px;
+}
+
+@media screen and (max-width:1200px) {
+  .seat-note:last-child {
+    width: 25%;
+  }
+  .logo img {
+    width: 90%;
+  }
+  .listSeat {
+    padding: 0px 30%;
+  }
+  .seat-note {
+    width: 25%;
+    margin-right: 0px;
+  }
+}
+
+@media screen and (max-width:992px) {
+  .title-phim-datghe {
+    padding: 20px;
+  }
+  .logo-rap-datghe img {
+    width: 80px;
+    height: 80px;
+  }
+  .logo-rap-datghe {
+    text-align: center;
+  }
+  .title-phim-datghe img {
+    width: 110px;
+    margin-top: 8px;
+  }
+  .detail-phim-datghe {
+    padding: 0px;
+    margin-left: -10%;
+  }
+  .detail-rap-datghe h5 {
+    font-size: 20px;
+  }
+  .detail-rap-datghe p {
+    color: #605f5f;
+    font-size: 16px;
+  }
+  .time-dat-ghe h6 {
+    display: block;
+    font-size: 14px;
+  }
+  .detail-rap-datghe .time-dat-ghe p {
+    color: #fd6500;
+    font-size: 20px;
+  }
+  .danh-sach-ghe {
+    padding: 0px 20%;
+  }
+  .padding-xs {
+    padding: 10px;
+  }
+  .img-ghe-trong,
+  .img-ghe-dang-chon,
+  .img-ghe-da-chon {
+    width: 15px;
+    height: 15px;
+  }
+  .ghe-note i {
+    font-size: 17px;
+  }
+  .ghe-note {
+    margin-right: 0px;
+    width: 25%;
+  }
+  .ghe-note:last-child {
+    width: 25%;
+  }
+  .ghe-note p {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .logo-datghe img {
+    width: 70px;
+    margin-top: 15px;
+  }
+  .detail-phim-datghe h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+  }
+  .detail-phim-datghe label {
+    font-size: 15px;
+  }
+  .detail-phim-datghe span {
+    color: black;
+    font-size: 17px;
+  }
+  .line-datghe {
+    margin-top: 180px;
+    margin-bottom: 10px;
+  }
+  .title-phim-datghe {
+    padding: 20px;
+  }
+  .logo-rap-datghe img {
+    width: 80px;
+    height: 80px;
+  }
+  .logo-rap-datghe {
+    text-align: center;
+  }
+  .title-phim-datghe img {
+    width: 110px;
+    margin-top: 8px;
+  }
+  .detail-phim-datghe {
+    padding: 0px;
+    margin-left: -10%;
+  }
+  .detail-rap-datghe h5 {
+    font-size: 20px;
+  }
+  .detail-rap-datghe p {
+    color: #605f5f;
+    font-size: 16px;
+  }
+  .time-dat-ghe h6 {
+    display: block;
+    font-size: 14px;
+  }
+  .detail-rap-datghe .time-dat-ghe p {
+    color: #fd6500;
+    font-size: 20px;
+  }
+  .danh-sach-ghe {
+    padding: 0px 20%;
+  }
+  .padding-xs {
+    padding: 10px;
+  }
+  .img-ghe-trong,
+  .img-ghe-dang-chon,
+  .img-ghe-da-chon {
+    width: 15px;
+    height: 15px;
+  }
+  .ghe-note i {
+    font-size: 17px;
+  }
+  .ghe-note {
+    margin-right: 0px;
+    width: 25%;
+  }
+  .ghe-note:last-child {
+    width: 25%;
+  }
+  .ghe-note p {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .logo-rap-datghe img {
+    width: 60px;
+    height: 60px;
+  }
+  .logo-datghe img {
+    width: 70px;
+    margin-top: 15px;
+  }
+  .detail-phim-datghe h2 {
+    margin-bottom: 15px;
+    font-size: 19px;
+  }
+  .detail-phim-datghe label {
+    font-size: 12px;
+  }
+  .detail-phim-datghe span {
+    color: black;
+    font-size: 15px;
+  }
+  .line-datghe {
+    margin-top: 150px;
+    margin-bottom: 10px;
+  }
+  .title-phim-datghe {
+    padding: 0;
+  }
+  .title-phim-datghe img {
+    width: 80px;
+    margin-top: 16px;
+  }
+  .detail-phim-datghe {
+    padding: 0px;
+    margin-left: -10%;
+  }
+  .detail-rap-datghe h5 {
+    font-size: 17px;
+  }
+  .detail-rap-datghe p {
+    color: #605f5f;
+    font-size: 14px;
+  }
+  .time-dat-ghe h6 {
+    display: none;
+  }
+  .detail-rap-datghe .time-dat-ghe p {
+    color: #fd6500;
+    font-size: 20px;
+    margin-top: 15px;
+  }
+  .danh-sach-ghe {
+    padding: 0px 15%;
+  }
+  .padding-xs {
+    padding: 0;
+  }
+  .img-ghe-trong,
+  .img-ghe-dang-chon,
+  .img-ghe-da-chon {
+    width: 15px;
+    height: 15px;
+  }
+  .ghe-note i {
+    font-size: 17px;
+  }
+  .ghe-note {
+    margin-right: 0px;
+    width: 25%;
+  }
+  .ghe-note:last-child {
+    width: 25%;
+  }
+  .ghe-note p {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width:410px) {
+  .detail-phim-datghe h2 {
+    margin-bottom: 15px;
+    font-size: 17px;
+  }
+  .detail-rap-datghe h5 {
+    font-size: 15px;
+  }
+  .detail-rap-datghe p {
+    font-size: 12px;
+  }
+}

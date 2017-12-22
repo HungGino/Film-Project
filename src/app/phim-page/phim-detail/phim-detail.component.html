@@ -1,4 +1,99 @@
-<div class="container-fluid">
+<div class="container-fluid" id="mainContent">
+  <div class="row bgMain">
+    <div class="col-sm-12 block mainDetail">
+      <div class="bgBlur"></div>
+      <img [src]="urlHost + MovieDetail.Image" class="bgPoster">
+      <div class="filmDetail maxWidth">
+        <div class="col-sm-3 block">
+          <img [src]="urlHost + MovieDetail.Image" class="imgFilm">
+        </div>
+        <div class="col-sm-5 infoFilm">
+          <div>
+            <span>{{MovieDetail.ReleaseDate}}</span>
+          </div>
+          <div>
+            <h3>
+              <span class="limit-age"> C13 </span> {{MovieDetail.Title}}</h3>
+          </div>
+          <div>
+            <span>150 phút - {{MovieDetail.Rating}}.0 IMDb - 2D/Digital</span>
+          </div>
+          <button class="btn btnBuy"><a pageScroll href="#showTime">Mua Vé</a></button>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="maxWidth titleContent">
+      <ul class="nav nav-tabs navCenter">
+        <li [ngClass]="{'chooseTitle':isSelected(1)}" (click)="Selected(1)">
+          <h3>Lịch Chiếu</h3>
+        </li>
+        <li [ngClass]="{'chooseTitle':isSelected(2)}" (click)="Selected(2)">
+          <h3>Thông Tin</h3>
+        </li>
+        <li [ngClass]="{'chooseTitle':isSelected(3)}" (click)="Selected(3)">
+          <h3>Đánh Giá</h3>
+        </li>
+      </ul>
+    </div>
+    <div [ngSwitch]="selected">
+      <div *ngSwitchCase="1" id="showTime" class="maxWidth">
+        <app-showtimes [MovieDetail]="MovieDetail"></app-showtimes>
+      </div>
+      <div *ngSwitchCase="2" id="showInfo" class="maxWidth">
+        <div class="row">
+          <div class="col-sm-6 col-xs-12 infoDetail">
+            <div class="row left">
+              <p class="title">Ngày phát hành</p>
+              <p class="contentInfo">{{MovieDetail.ReleaseDate}}</p>
+            </div>
+            <div class="row left">
+              <p class="title">Đạo diễn</p>
+              <p class="contentInfo">{{MovieDetail.Producer}}</p>
+            </div>
+            <div class="row left">
+              <p class="title">Giám đốc</p>
+              <p class="contentInfo">{{MovieDetail.Director}}</p>
+            </div>
+            <div class="row left">
+              <p class="title">Thể loại</p>
+              <p class="contentInfo">{{MovieDetail.Genre}}</p>
+            </div>
+            <div class="row left">
+              <p class="title">Định dạng</p>
+              <p class="contentInfo">2D/Digital</p>
+            </div>
+            <div class="row left">
+              <p class="title">Quốc gia SX</p>
+              <p class="contentInfo">Mỹ</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xs-12 infoDetail">
+            <div class="row right">
+              <p class="title">Nội dung</p>
+            </div>
+            <div class="row right">
+              <p class="contentInfoFull">{{MovieDetail.Description}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-offset-1 col-sm-10">
+            <h3 style="color:#fff">Trailer và hình ảnh</h3>
+            <iframe width="100%" height="450px" [src]="MovieDetail.TrailerURI" frameborder="0" allowfullscreen class="trailer"></iframe>
+          </div>
+        </div>
+      </div>
+      <div *ngSwitchCase="3" id="showReview" class="maxWidth">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- <div class="container-fluid">
   <div class="row row-1" id="top">
     <div class="col-sm-offset-1 col-md-3 col-sm-4 border-img">
       <img [src]="urlHost + MovieDetail.Image" class="img-responsive">
@@ -14,7 +109,7 @@
           <b>Khởi chiếu:</b>  
         </div>
         <div class="col-sm-9">
-          <p>16/11/2017</p>
+          <p>{{MovieDetail.ReleaseDate}}</p>
         </div>
       </section>
       <section class="row">
@@ -22,15 +117,7 @@
           <b>Thể loại:</b>
         </div>
         <div class="col-sm-9">
-          <p>Phiêu lưu, Hành động, Giả Tưởng</p>
-        </div>
-      </section>
-      <section class="row">
-        <div class="col-sm-3">
-          <b>Diễn viên:</b>
-        </div>
-        <div class="col-sm-9">
-          <p>Ben Affleck, Henry Cavill, Gal Gadot, Ezra Miller, Ray Fisher, Jason Momoa</p>
+          <p>{{MovieDetail.Genre}}</p>
         </div>
       </section>
       <section class="row">
@@ -68,11 +155,9 @@
     </div>
   </div>
 
-  <!-- Modal -->
   <div id="trailerModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
-      <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" (click)="StopTrailer()"> &times; </button>
@@ -84,4 +169,4 @@
     </div>
   </div>
 
-</div>
+</div> -->

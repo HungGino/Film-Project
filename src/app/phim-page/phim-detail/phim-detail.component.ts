@@ -1,10 +1,10 @@
 import { Component, OnInit,Pipe,PipeTransform } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { Subscription, Observable } from 'rxjs';
+import { ISubscription } from 'rxjs/Subscription';
 import { MovieService } from '../../service/movie.service';
 import { DomSanitizer} from '@angular/platform-browser';
-declare var jquery: any;
-declare var $: any;
+declare let $: any;
 
 @Component({
   selector: 'app-phim-detail',
@@ -17,16 +17,22 @@ export class PhimDetailComponent implements OnInit,PipeTransform  {
   private MovieDetail: any = {};
   private MovieID: number;
   private MaNhom: any;
+  private showDate: Array<any>;
+  private showTime: Array<any>;
   public status: boolean = false;
-  public player;
+  public selected: number;
 
   transform(url) {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
-  /*onYouTubePlayerAPIReady() {
-    this.player = new YT.Player('player');
-  }*/
+  Selected(value: number){
+    this.selected = value;
+  }
+
+  isSelected(value: number){
+    return this.selected === value;
+  }
 
   Show() {
     this.status = true;
@@ -45,13 +51,17 @@ export class PhimDetailComponent implements OnInit,PipeTransform  {
   ) { }
 
   ngOnInit() {
+    
     this.activatedRouter.queryParams.subscribe(thamso => {
       this.MovieID = parseInt(thamso['id']);
       this.MaNhom = thamso['groupid'];
     });
     this.movieService.LayChiTietPhim_LichChieuTheoNhom(this.MovieID, this.MaNhom).subscribe((result: any) => {
+      // Lấy kết quả từ service
       this.MovieDetail = result;
+      this.selected = 1;
       this.MovieDetail.TrailerURI = this.transform(this.MovieDetail.TrailerURI + '?autoplay=1&hd=1&showinfo=0&enablejsapi=1');
+      this.MovieDetail.ReleaseDate = this.MovieDetail.ReleaseDate.substr(0, 10);
     }, error => {
       this.MovieDetail = error;
     });

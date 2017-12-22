@@ -1,5 +1,3 @@
-import { MyDatePicker } from "mydatepicker";
-
 export class Movie {
     public ID: number;
     public Title: string;
@@ -9,6 +7,6 @@ export class Movie {
     public Director: string;
     public Writer: string;
     public Producer: string;
-    public ReleaseDate: MyDatePicker;
+    public ReleaseDate: Date;
     public TrailerURI: string;
 }
