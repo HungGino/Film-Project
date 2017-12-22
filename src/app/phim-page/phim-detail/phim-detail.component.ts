@@ -49,7 +49,6 @@ export class PhimDetailComponent implements OnInit, PipeTransform {
   ) { }
 
   ngOnInit() {
-
     this.activatedRouter.queryParams.subscribe(thamso => {
       this.MovieID = parseInt(thamso['id']);
       this.MaNhom = thamso['groupid'];
@@ -57,6 +56,7 @@ export class PhimDetailComponent implements OnInit, PipeTransform {
     this.movieService.LayChiTietPhim_LichChieuTheoNhom(this.MovieID, this.MaNhom).subscribe((result: any) => {
       // Lấy kết quả từ service
       this.MovieDetail = result;
+      console.log(result);
       this.selected = 1;
       this.MovieDetail.TrailerURI = this.transform(this.MovieDetail.TrailerURI + '?autoplay=1&hd=1&showinfo=0&enablejsapi=1');
       this.MovieDetail.ReleaseDate = this.MovieDetail.ReleaseDate.substr(0, 10);

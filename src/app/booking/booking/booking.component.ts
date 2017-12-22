@@ -6,8 +6,6 @@ import { ISubscription } from 'rxjs/Subscription';
 import { SeatComponent } from '../seat/seat.component';
 import { BookTicket } from '../../models/book-ticket';
 import { Ticket } from '../../models/ticket';
-import { SimpleChange } from '@angular/core';
-import { checkAndUpdateNode } from '@angular/core/src/view/view';
 declare const $: any;
 
 
@@ -39,7 +37,11 @@ export class BookingComponent implements OnInit {
   ) { }
 
   public BookTicket() {
-
+    this.movieService.DatVe(this.resultBooking).subscribe((result: any) => {
+      console.log(result);
+    }, error => {
+      console.log('error');
+    });
   }
 
   public booking(seatStatus: boolean, seatID: any, count: number, priceTicket: number) {
@@ -114,11 +116,6 @@ export class BookingComponent implements OnInit {
     $(priceTotal).html(`${this.priceTotal},000 đ`);
     console.log(this.priceCombo);
   }
-
-  // ngOnChange(changes: SimpleChange) {
-  //   this.priceTotal = this.priceTicketTotal + this.priceCombo;
-  //   console.log(this.priceTotal);
-  // }
 
   ngOnInit() {
     this.activatedRouter.queryParams.subscribe(parameters => {

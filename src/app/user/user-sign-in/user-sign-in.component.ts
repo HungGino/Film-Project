@@ -5,8 +5,8 @@ import { UserLogin } from '../../Models/user-login'; // import class UserLogin
 import { Router } from '@angular/router';
 
 // Khai báo jquery
-declare var jquery:any;
-declare var $:any;
+declare let $: any;
+declare let swal: any;
 
 @Component({
   selector: 'app-user-sign-in',
@@ -14,46 +14,54 @@ declare var $:any;
   styleUrls: ['./user-sign-in.component.css']
 })
 export class UserSignInComponent implements OnInit {
+  private UserLogin: UserLogin;
+  private kqdangnhap: boolean;
+  public userStatus: boolean;
+  @Output() ktdangnhap = new EventEmitter();
+  @Output() tinhtrangdangnhap = new EventEmitter();
 
-  public userStatus:boolean;
-  @Output () ktdangnhap = new EventEmitter();
   // Hàm hiển thị đăng kí
-  SignUp(){
+  SignUp() {
     this.userStatus = false;
-    // Đẩy giá trị biến userStatus ra component cha    
+    // Đẩy giá trị biến userStatus ra component cha
     this.ktdangnhap.emit(this.userStatus);
   }
-  
- 
-  private UserLogin:UserLogin;
-  private kqdangnhap:boolean;
-  
-  @Output () tinhtrangdangnhap = new EventEmitter();
 
-  constructor(private userService:UserService, private router:Router) { }
-  
-  Login(usLogin:UserLogin){
-    usLogin.GroupID = 'GP04';  
+  constructor(private userService: UserService, private router: Router) { }
+
+  Login(usLogin: UserLogin) {
+    usLogin.GroupID = 'GP03';
     console.log(usLogin);
     this.userService.DangNhap(usLogin);
     setTimeout(() => {
-      if (this.userService.KiemTraDangNhap() == true){
+      if (this.userService.KiemTraDangNhap() === true) {
         console.log('Đăng nhập thành công');
-        this.router.navigate(['']);
+        swal({
+          position: 'center-center',
+          type: 'success',
+          title: 'Đăng nhập thành công',
+          showConfirmButton: true,
+          timer: 1500
+        });
         $('#myModal').modal('hide');
         // Đẩy giá trị kqdangnhap ra component cha để xét hiển thị
         this.kqdangnhap = true;
         this.tinhtrangdangnhap.emit(this.kqdangnhap);
-      }
-      else{
+      } else {
         // Đẩy giá trị kqdangnhap ra component cha để xét hiển thị
         this.kqdangnhap = false;
         this.tinhtrangdangnhap.emit(this.kqdangnhap);
         console.log('Tên đăng nhập hoặc mật khẩu không đúng');
-     
+        swal({
+          position: 'center-center',
+          type: 'error',
+          title: 'Tên đăng nhập hoặc mật khẩu không đúng',
+          showConfirmButton: true,
+          timer: 1500
+        });
       }
     }, 200);
-  
+
   }
 
   ngOnInit() {

@@ -6,9 +6,6 @@ import { ViewEncapsulation } from '@angular/core';
 import { ListMovie } from '../../../models/list-movie';
 declare var jquery: any;
 declare var $: any;
-@Pipe({
-  name: 'fill'
-})
 @Component({
   selector: 'app-phim',
   templateUrl: './phim.component.html',
@@ -16,7 +13,7 @@ declare var $: any;
   encapsulation: ViewEncapsulation.None
 })
 export class PhimComponent implements OnInit {
-  private Arr:Array<any> = [];
+  private Arr: Array<any> = [];
   private MaNhom: string = 'GP03';
   private urlHost: string = 'http://sv.myclass.vn/Images/Movies/';
   private DanhSachPhim: Array<Movie>;
@@ -58,10 +55,11 @@ export class PhimComponent implements OnInit {
 
     this.servicePhim.LayDanhSachPhim().subscribe((result: Array<Movie>) => {
       this.DanhSachPhim = result;
+      console.log(this.DanhSachPhim);
       let pages: number = 0;
       let filmInPage: number = 4;
       while (pages < result.length) {
-        let lstMovie:ListMovie = new ListMovie();
+        let lstMovie: ListMovie = new ListMovie();
         lstMovie.ListMovie = result.slice(pages, pages += filmInPage);
         this.Arr.push(lstMovie);
       }

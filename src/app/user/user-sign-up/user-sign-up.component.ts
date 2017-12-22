@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../../Models/user'; //import class User
 import { UserService } from '../../Service/user.service'; //import service
-
+declare let $: any;
+declare let swal: any;
 @Component({
   selector: 'app-user-sign-up',
   templateUrl: './user-sign-up.component.html',
@@ -22,21 +23,38 @@ export class UserSignUpComponent implements OnInit {
   {Id:'GP09',Name:'Nhóm 9'},
   {Id:'GP010',Name:'Nhóm 10'}]*/
 
-private userRegister:User;
-public kqDK:boolean;
-constructor(private userService:UserService) { }
+  private userRegister: User;
+  public kqDK: boolean;
+  constructor(private userService: UserService) { }
 
-RegisterUser(user:any){
-  user.GroupID ='GP03';
-  this.userService.TaoTaiKhoan(user).subscribe((result:any) => {
-    this.userRegister = result;
-    console.log(result);
-    this.kqDK = true;
-    }, 
-    error => {
-    this.userRegister = error;
-    }); 
-}
+  RegisterUser(user: any) {
+    user.GroupID = 'GP03';
+    this.userService.TaoTaiKhoan(user).subscribe((result: any) => {
+      this.userRegister = result;
+      if (result === 'Username already exists') {
+        swal({
+          position: 'center-center',
+          type: 'error',
+          title: 'Tên đăng nhập đã tồn tại',
+          showConfirmButton: true,
+          timer: 1500
+        });
+      } else {
+        $('#myModal').modal('hide');
+        swal({
+          position: 'center-center',
+          type: 'success',
+          title: 'Đăng ký thành công',
+          showConfirmButton: true,
+          timer: 1500
+        });
+      }
+      this.kqDK = true;
+    },
+      error => {
+        this.userRegister = error;
+      });
+  }
 
   ngOnInit() {
   }

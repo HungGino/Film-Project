@@ -37,18 +37,17 @@
   </div>
 
   <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog"  >
+  <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
-
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
-          <app-user-sign-in *ngIf = 'userStatus' (ktdangnhap) = "checkSignUp($event)" (tinhtrangdangnhap) = "tinhtrangdangnhap($event)"></app-user-sign-in>    
-          <app-user-sign-up *ngIf = '!userStatus' ></app-user-sign-up>
-          <div *ngIf = '!kqdangnhap'> Tên đăng nhập hoặc mật khẩu không đúng </div>
+          <app-user-sign-in *ngIf="userStatus" (ktdangnhap)="checkSignUp($event)" (tinhtrangdangnhap)="tinhtrangdangnhap($event)"></app-user-sign-in>    
+          <app-user-sign-up *ngIf="!userStatus" ></app-user-sign-up>
+          <div *ngIf="kqdangnhap"> Tên đăng nhập hoặc mật khẩu không đúng </div>
         </div>
       </div>
     </div>
