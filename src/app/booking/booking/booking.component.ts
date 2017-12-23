@@ -7,7 +7,7 @@ import { SeatComponent } from '../seat/seat.component';
 import { BookTicket } from '../../models/book-ticket';
 import { Ticket } from '../../models/ticket';
 declare const $: any;
-
+declare const swal: any;
 
 @Component({
   selector: 'app-booking',
@@ -39,6 +39,13 @@ export class BookingComponent implements OnInit {
   public BookTicket() {
     this.movieService.DatVe(this.resultBooking).subscribe((result: any) => {
       console.log(result);
+      swal({
+        position: 'center-center',
+        type: 'success',
+        title: 'Đặt vé thành công',
+        showConfirmButton: true,
+        timer: 1500
+      });
     }, error => {
       console.log('error');
     });

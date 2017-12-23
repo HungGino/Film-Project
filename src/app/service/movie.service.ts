@@ -29,14 +29,14 @@ export class MovieService {
     return obServe;
   }
 
-  //Link trỏ đến api backend post thông tin danh sách ghế ngồi đã đặt , ... theo nhóm, theo người dùng
+  // Link trỏ đến api backend post thông tin danh sách ghế ngồi đã đặt , ... theo nhóm, theo người dùng
   private apiUrlPostBookingTickets = 'http://sv.myclass.vn/api/movie/BookingTickets';
   public DatVe(lstVe: any): Observable<any> {
     //Để post được json lên server phải có header và body : tùy backend quy định khác nhau
     let header = new Headers();
     header.append('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8')
     //Body là nội dung tham số gửi lên server ở đây là chuỗi json với tên tham số là data (server quy định)
-    let body = `data=${ JSON.stringify(lstVe)}`;
+    let body = `data=${JSON.stringify(lstVe)}`;
     var obServe = this._http.post(this.apiUrlPostBookingTickets, body, { headers: header }).map((result: Response) => result.json());
     return obServe;
   }
